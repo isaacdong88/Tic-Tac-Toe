@@ -7,9 +7,9 @@
 // ]
 
 let gameBoard = [
-    [' ',' ','X'],
-    [' ','X',' '],
-    ['X',' ',' ']
+    ['O','X','O'],
+    ['O','X','X'],
+    [' X','O','X']
 ]
 
 // Create Player1 and Player2 variables acts as on/off switch between turns
@@ -17,6 +17,7 @@ let player1 = true
 let player2 = false
 console.log(gameBoard)
 console.log(gameBoard[0][1])
+let winner = ''
 
 // Create function that will track which spot each player go and determines either to draw a 'X' or an 'O' on the board. The same function will also check each time the 8 winning combinations, need 8 if statements. If there is a combination thats have all three matches declare the winner and end the match.
 
@@ -35,24 +36,28 @@ const gameTracker = () => {
     // Row 1 win check
     if(gameBoard[0][0]===gameBoard[0][1] && gameBoard[0][1]===gameBoard[0][2] && gameBoard[0].includes(' ') === false) {
         console.log('You Win')
+        winner = 'player'
     } else {
         console.log('No Win')
     }
     //Row 2 win check
     if(gameBoard[1][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[1][2] && gameBoard[1].includes(' ') === false) {
         console.log('You Win')
+        winner = 'player'
     } else {
         console.log('No Win')
     }
     //Row 3 win check
     if(gameBoard[2][0]===gameBoard[2][1] && gameBoard[2][1]===gameBoard[2][2] && gameBoard[2].includes(' ') === false) {
         console.log('You Win')
+        winner = 'player'
     } else {
         console.log('No Win')
     }
     //Column 1 win check
     if(gameBoard[0][0]===gameBoard[1][0] && gameBoard[1][0]===gameBoard[2][0] && gameBoard[0][0].includes(' ') === false ) {
         console.log('You Win')
+        winner = 'player'
     } else {
         console.log('No Win')
     }
@@ -60,30 +65,40 @@ const gameTracker = () => {
     //Column 2 win check
     if(gameBoard[0][1]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][1] && gameBoard[0][1].includes(' ') === false ) {
         console.log('You Win')
+        winner = 'player'
     } else {
         console.log('No Win')
     }
     //Column 3 win check
     if(gameBoard[0][2]===gameBoard[1][2] && gameBoard[1][2]===gameBoard[2][2] && gameBoard[0][2].includes(' ') === false ) {
         console.log('You Win')
+        winner = 'player'
     } else {
         console.log('No Win')
     }
     //Diagonal win check '\'
     if(gameBoard[0][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][2] && gameBoard[0][0].includes(' ') === false ) {
         console.log('You Win')
+        winner = 'player'
     } else {
         console.log('No Win')
     }
     //Diagonal win check '/'
     if(gameBoard[0][2]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][0] && gameBoard[0][2].includes(' ') === false ) {
         console.log('You Win')
+        winner = 'player'
     } else {
         console.log('No Win')
+    }
+    //check for tie
+    if (gameBoard[0].includes(' ')===false && gameBoard[1].includes(' ')===false && gameBoard[2].includes(' ')===false && winner==='') {
+        console.log('Tie')
     }
 }
 gameTracker()
 
-console.log(gameBoard[0][0].includes(' '))
+console.log(gameBoard[1].includes(' '))
+
+
 
 //Create a button for play again that resets the game
