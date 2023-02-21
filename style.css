@@ -1,0 +1,35 @@
+.row1 {
+    display: flex;
+    height: 100px;
+    width: 300px;
+}
+
+.row1 div {
+    border: ridge green;
+    height: 100px;
+    width: 100px;
+}    
+
+.row2 {
+    display: flex;
+    height: 100px;
+    width: 300px;
+}
+
+.row2 div {
+    border: ridge red;
+    height: 100px;
+    width: 100px;
+}  
+
+.row3 {
+    display: flex;
+    height: 100px;
+    width: 300px;
+}
+
+.row3 div {
+    border: ridge blue;
+    height: 100px;
+    width: 100px;
+}  
