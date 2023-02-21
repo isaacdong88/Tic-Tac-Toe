@@ -7,9 +7,9 @@
 // ]
 
 let gameBoard = [
-    ['','',''],
-    ['','',''],
-    ['','','']
+    ['','X','X'],
+    ['X','','X'],
+    ['X','X','']
 ]
 
 // Create Player1 and Player2 variables acts as on/off switch between turns
@@ -32,6 +32,18 @@ console.log(gameBoard[0][1])
 const gameTracker = () => {
     // Row 1 win check
     if(gameBoard[0][0]===gameBoard[0][1] && gameBoard[0][1]===gameBoard[0][2] && gameBoard[0].includes('') === false) {
+        console.log('You Win')
+    } else {
+        console.log('No Win')
+    }
+    //Row 2 win check
+    if(gameBoard[1][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[1][2] && gameBoard[1].includes('') === false) {
+        console.log('You Win')
+    } else {
+        console.log('No Win')
+    }
+    //Row 3 win check
+    if(gameBoard[2][0]===gameBoard[2][1] && gameBoard[2][1]===gameBoard[2][2] && gameBoard[2].includes('') === false) {
         console.log('You Win')
     } else {
         console.log('No Win')
