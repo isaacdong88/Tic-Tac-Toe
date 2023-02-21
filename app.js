@@ -12,6 +12,9 @@ let gameBoard = [
     ['','','']
 ]
 
+let player1 = true
+let player2 = false
+
 console.log(gameBoard)
 
 // Create Player1 and Player2 variables acts as on/off switch between turns
