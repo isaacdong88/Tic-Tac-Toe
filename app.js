@@ -7,9 +7,9 @@
 // ]
 
 let gameBoard = [
-    ['O','X','O'],
-    ['O','X','X'],
-    [' X','O','X']
+    [' ',' ',' '],
+    [' ',' ',' '],
+    [' ',' ',' ']
 ]
 
 // Create Player1 and Player2 variables acts as on/off switch between turns
@@ -19,7 +19,9 @@ console.log(gameBoard)
 console.log(gameBoard[0][1])
 let winner = ''
 
-// Create function that will track which spot each player go and determines either to draw a 'X' or an 'O' on the board. The same function will also check each time the 8 winning combinations, need 8 if statements. If there is a combination thats have all three matches declare the winner and end the match.
+// Create functions that will track which spot each player go and determines either to draw a 'X' or an 'O' on the board. Will need one function for each spot
+
+//Create function that will check the gameboard for the 8 winning combinations, need 8 if statements. If there is a combination thats have all three matches declare the winner and end the match. Another condition set to check for ties
 
 // 8 if statements, 3 checks horizontal win, 3 vertical win and 2 diagonal wins
 
@@ -95,9 +97,53 @@ const gameTracker = () => {
         console.log('Tie')
     }
 }
-gameTracker()
+// gameTracker()
 
-console.log(gameBoard[1].includes(' '))
+//Function for spot R1C1 determines either to place X or O and append to gameboard array accordingly
+const r1c1 = () => {
+    if(gameBoard[0][0]===" ") {
+        if(player1) {
+            let letterX = document.querySelector('.r1c1')
+            letterX.innerHTML = "X"
+            gameBoard[0][0] = "X"
+            console.log(gameBoard)
+            player1 = false
+            player2 = true
+        } else {
+            let letterO = document.querySelector('.r1c1')
+            letterO.innerHTML = "O"
+            gameBoard[0][0] = "O"
+            console.log(gameBoard)
+            player1 = true
+            player2 = false 
+        }
+        gameTracker()
+    }
+}
+
+const r1c2 = () => {
+    if(gameBoard[0][1]===" ") {
+        if(player1) {
+            let letterX = document.querySelector('.r1c2')
+            letterX.innerHTML = "X"
+            gameBoard[0][1] = "X"
+            console.log(gameBoard)
+            player1 = false
+            player2 = true
+        } else {
+            let letterO = document.querySelector('.r1c2')
+            letterO.innerHTML = "O"
+            gameBoard[0][1] = "O"
+            console.log(gameBoard)
+            player1 = true
+            player2 = false 
+        }
+        gameTracker()
+    }
+}
+
+
+// console.log(gameBoard[1].includes(' '))
 
 
 
