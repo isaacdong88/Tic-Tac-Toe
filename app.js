@@ -19,6 +19,8 @@ let player2 = false
 let player1Win = 0
 let player2Win = 0
 let winner = ''
+//Keep tracks who went first, so each round alternates
+let wentFirst = ''
 
 // Create functions that will track which spot each player go and determines either to draw a 'X' or an 'O' on the board. Will need one function for each spot
 
@@ -38,8 +40,14 @@ let winner = ''
 const gameTracker = () => {
     // Row 1 win check
     if(gameBoard[0][0]===gameBoard[0][1] && gameBoard[0][1]===gameBoard[0][2] && gameBoard[0].includes(' ') === false) {
-        console.log('You Win')
-        winner = 'player'
+        if(player1===false) {
+            winner = 'Player1'
+            player1Win += 1
+        } else {
+            winner = 'Player2'
+            player2Win += 1
+        }
+        console.log(winner)
     }
     //Row 2 win check
     if(gameBoard[1][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[1][2] && gameBoard[1].includes(' ') === false) {
@@ -82,6 +90,44 @@ const gameTracker = () => {
     }
 }
 // gameTracker()
+//Game reset function
+const newRound = () => {
+    gameBoard = [
+    [' ',' ',' '],
+    [' ',' ',' '],
+    [' ',' ',' ']
+    ]
+    player1Win = 0
+    player2Win = 0
+    winner = ''
+    let r1c1 = document.querySelector('.r1c1')
+    r1c1.innerHTML = ''
+    let r1c2 = document.querySelector('.r1c2')
+    r1c2.innerHTML = ''
+    let r1c3 = document.querySelector('.r1c3')
+    r1c3.innerHTML = ''
+    let r2c1 = document.querySelector('.r2c1')
+    r2c1.innerHTML = ''
+    let r2c2 = document.querySelector('.r2c2')
+    r2c2.innerHTML = ''
+    let r2c3 = document.querySelector('.r2c3')
+    r2c3.innerHTML = ''
+    let r3c1 = document.querySelector('.r3c1')
+    r3c1.innerHTML = ''
+    let r3c2 = document.querySelector('.r3c2')
+    r3c2.innerHTML = ''
+    let r3c3 = document.querySelector('.r3c3')
+    r3c3.innerHTML = ''
+    if(wentFirst==="X") {
+        player1 = false
+        player2 = true
+        wentFirst = ''
+    } else {
+        player1 = true
+        player2 = false
+        wentFirst = ''
+    }
+}
 
 //Function for spot R1C1 determines either to place X or O and append to gameboard array accordingly
 const r1c1 = () => {
@@ -93,6 +139,9 @@ const r1c1 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            if(wentFirst==="") {
+                wentFirst = "X"
+            }
         } else {
             let letterO = document.querySelector('.r1c1')
             letterO.innerHTML = "O"
@@ -100,6 +149,9 @@ const r1c1 = () => {
             console.log(gameBoard)
             player1 = true
             player2 = false 
+            if(wentFirst==="") {
+                wentFirst = "O"
+            }
         }
         gameTracker()
     }
@@ -114,13 +166,19 @@ const r1c2 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            if(wentFirst==="") {
+                wentFirst = "X"
+            }
         } else {
             let letterO = document.querySelector('.r1c2')
             letterO.innerHTML = "O"
             gameBoard[0][1] = "O"
             console.log(gameBoard)
             player1 = true
-            player2 = false 
+            player2 = false
+            if(wentFirst==="") {
+                wentFirst = "O"
+            } 
         }
         gameTracker()
     }
@@ -135,13 +193,19 @@ const r1c3 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            if(wentFirst==="") {
+                wentFirst = "X"
+            }
         } else {
             let letterO = document.querySelector('.r1c3')
             letterO.innerHTML = "O"
             gameBoard[0][2] = "O"
             console.log(gameBoard)
             player1 = true
-            player2 = false 
+            player2 = false
+            if(wentFirst==="") {
+                wentFirst = "O"
+            } 
         }
         gameTracker()
     }
@@ -156,6 +220,9 @@ const r2c1 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            if(wentFirst==="") {
+                wentFirst = "X"
+            }
         } else {
             let letterO = document.querySelector('.r2c1')
             letterO.innerHTML = "O"
@@ -163,6 +230,9 @@ const r2c1 = () => {
             console.log(gameBoard)
             player1 = true
             player2 = false 
+            if(wentFirst==="") {
+                wentFirst = "O"
+            }
         }
         gameTracker()
     }
@@ -177,6 +247,9 @@ const r2c2 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            if(wentFirst==="") {
+                wentFirst = "X"
+            }
         } else {
             let letterO = document.querySelector('.r2c2')
             letterO.innerHTML = "O"
@@ -184,6 +257,9 @@ const r2c2 = () => {
             console.log(gameBoard)
             player1 = true
             player2 = false 
+            if(wentFirst==="") {
+                wentFirst = "O"
+            }
         }
         gameTracker()
     }
@@ -198,6 +274,9 @@ const r2c3 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            if(wentFirst==="") {
+                wentFirst = "X"
+            }
         } else {
             let letterO = document.querySelector('.r2c3')
             letterO.innerHTML = "O"
@@ -205,6 +284,9 @@ const r2c3 = () => {
             console.log(gameBoard)
             player1 = true
             player2 = false 
+            if(wentFirst==="") {
+                wentFirst = "O"
+            }
         }
         gameTracker()
     }
@@ -219,6 +301,9 @@ const r3c1 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            if(wentFirst==="") {
+                wentFirst = "X"
+            }
         } else {
             let letterO = document.querySelector('.r3c1')
             letterO.innerHTML = "O"
@@ -226,6 +311,9 @@ const r3c1 = () => {
             console.log(gameBoard)
             player1 = true
             player2 = false 
+            if(wentFirst==="") {
+                wentFirst = "O"
+            }
         }
         gameTracker()
     }
@@ -240,6 +328,9 @@ const r3c2 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            if(wentFirst==="") {
+                wentFirst = "X"
+            }
         } else {
             let letterO = document.querySelector('.r3c2')
             letterO.innerHTML = "O"
@@ -247,6 +338,9 @@ const r3c2 = () => {
             console.log(gameBoard)
             player1 = true
             player2 = false 
+            if(wentFirst==="") {
+                wentFirst = "O"
+            }
         }
         gameTracker()
     }
@@ -261,6 +355,9 @@ const r3c3 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            if(wentFirst==="") {
+                wentFirst = "X"
+            }
         } else {
             let letterO = document.querySelector('.r3c3')
             letterO.innerHTML = "O"
@@ -268,6 +365,9 @@ const r3c3 = () => {
             console.log(gameBoard)
             player1 = true
             player2 = false 
+            if(wentFirst==="") {
+                wentFirst = "O"
+            }
         }
         gameTracker()
     }
