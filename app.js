@@ -50,7 +50,7 @@ const gameTracker = () => {
         console.log(winner)
     }
     //Row 2 win check
-    if(gameBoard[1][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[1][2] && gameBoard[1].includes(' ') === false) {
+    else if(gameBoard[1][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[1][2] && gameBoard[1].includes(' ') === false) {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
@@ -61,7 +61,7 @@ const gameTracker = () => {
         console.log(winner)
     }
     //Row 3 win check
-    if(gameBoard[2][0]===gameBoard[2][1] && gameBoard[2][1]===gameBoard[2][2] && gameBoard[2].includes(' ') === false) {
+    else if(gameBoard[2][0]===gameBoard[2][1] && gameBoard[2][1]===gameBoard[2][2] && gameBoard[2].includes(' ') === false) {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
@@ -72,7 +72,7 @@ const gameTracker = () => {
         console.log(winner)
     }
     //Column 1 win check
-    if(gameBoard[0][0]===gameBoard[1][0] && gameBoard[1][0]===gameBoard[2][0] && gameBoard[0][0].includes(' ') === false ) {
+    else if(gameBoard[0][0]===gameBoard[1][0] && gameBoard[1][0]===gameBoard[2][0] && gameBoard[0][0].includes(' ') === false ) {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
@@ -83,7 +83,7 @@ const gameTracker = () => {
         console.log(winner)
     }
     //Column 2 win check
-    if(gameBoard[0][1]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][1] && gameBoard[0][1].includes(' ') === false ) {
+    else if(gameBoard[0][1]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][1] && gameBoard[0][1].includes(' ') === false ) {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
@@ -94,7 +94,7 @@ const gameTracker = () => {
         console.log(winner)
     }
     //Column 3 win check
-    if(gameBoard[0][2]===gameBoard[1][2] && gameBoard[1][2]===gameBoard[2][2] && gameBoard[0][2].includes(' ') === false ) {
+    else if(gameBoard[0][2]===gameBoard[1][2] && gameBoard[1][2]===gameBoard[2][2] && gameBoard[0][2].includes(' ') === false ) {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
@@ -105,7 +105,7 @@ const gameTracker = () => {
         console.log(winner)
     }
     //Diagonal win check '\'
-    if(gameBoard[0][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][2] && gameBoard[0][0].includes(' ') === false ) {
+    else if(gameBoard[0][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][2] && gameBoard[0][0].includes(' ') === false ) {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
@@ -116,7 +116,7 @@ const gameTracker = () => {
         console.log(winner)
     }
     //Diagonal win check '/'
-    if(gameBoard[0][2]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][0] && gameBoard[0][2].includes(' ') === false ) {
+    else if(gameBoard[0][2]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][0] && gameBoard[0][2].includes(' ') === false ) {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
@@ -127,7 +127,7 @@ const gameTracker = () => {
         console.log(winner)
     }
     //check for tie
-    if (gameBoard[0].includes(' ')===false && gameBoard[1].includes(' ')===false && gameBoard[2].includes(' ')===false && winner==='') {
+    else if (gameBoard[0].includes(' ')===false && gameBoard[1].includes(' ')===false && gameBoard[2].includes(' ')===false && winner==='') {
         console.log('Tie')
     }
 }
