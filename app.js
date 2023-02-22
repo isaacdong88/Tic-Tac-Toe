@@ -120,7 +120,7 @@ const r1c1 = () => {
         gameTracker()
     }
 }
-
+//Function for spot R1C2 determines either to place X or O and append to gameboard array accordingly
 const r1c2 = () => {
     if(gameBoard[0][1]===" ") {
         if(player1) {
@@ -141,10 +141,151 @@ const r1c2 = () => {
         gameTracker()
     }
 }
-
-
-// console.log(gameBoard[1].includes(' '))
-
-
-
+//Function for spot R1C3 determines either to place X or O and append to gameboard array accordingly
+const r1c3 = () => {
+    if(gameBoard[0][2]===" ") {
+        if(player1) {
+            let letterX = document.querySelector('.r1c3')
+            letterX.innerHTML = "X"
+            gameBoard[0][2] = "X"
+            console.log(gameBoard)
+            player1 = false
+            player2 = true
+        } else {
+            let letterO = document.querySelector('.r1c3')
+            letterO.innerHTML = "O"
+            gameBoard[0][2] = "O"
+            console.log(gameBoard)
+            player1 = true
+            player2 = false 
+        }
+        gameTracker()
+    }
+}
+//Function for spot R2C1 determines either to place X or O and append to gameboard array accordingly
+const r2c1 = () => {
+    if(gameBoard[1][0]===" ") {
+        if(player1) {
+            let letterX = document.querySelector('.r2c1')
+            letterX.innerHTML = "X"
+            gameBoard[1][0] = "X"
+            console.log(gameBoard)
+            player1 = false
+            player2 = true
+        } else {
+            let letterO = document.querySelector('.r2c1')
+            letterO.innerHTML = "O"
+            gameBoard[1][0] = "O"
+            console.log(gameBoard)
+            player1 = true
+            player2 = false 
+        }
+        gameTracker()
+    }
+}
+//Function for spot R2C2 determines either to place X or O and append to gameboard array accordingly
+const r2c2 = () => {
+    if(gameBoard[1][1]===" ") {
+        if(player1) {
+            let letterX = document.querySelector('.r2c2')
+            letterX.innerHTML = "X"
+            gameBoard[1][1] = "X"
+            console.log(gameBoard)
+            player1 = false
+            player2 = true
+        } else {
+            let letterO = document.querySelector('.r2c2')
+            letterO.innerHTML = "O"
+            gameBoard[1][1] = "O"
+            console.log(gameBoard)
+            player1 = true
+            player2 = false 
+        }
+        gameTracker()
+    }
+}
+//Function for spot R2C3 determines either to place X or O and append to gameboard array accordingly
+const r2c3 = () => {
+    if(gameBoard[1][2]===" ") {
+        if(player1) {
+            let letterX = document.querySelector('.r2c3')
+            letterX.innerHTML = "X"
+            gameBoard[1][2] = "X"
+            console.log(gameBoard)
+            player1 = false
+            player2 = true
+        } else {
+            let letterO = document.querySelector('.r2c3')
+            letterO.innerHTML = "O"
+            gameBoard[1][2] = "O"
+            console.log(gameBoard)
+            player1 = true
+            player2 = false 
+        }
+        gameTracker()
+    }
+}
+//Function for spot R3C1 determines either to place X or O and append to gameboard array accordingly
+const r3c1 = () => {
+    if(gameBoard[2][0]===" ") {
+        if(player1) {
+            let letterX = document.querySelector('.r3c1')
+            letterX.innerHTML = "X"
+            gameBoard[2][0] = "X"
+            console.log(gameBoard)
+            player1 = false
+            player2 = true
+        } else {
+            let letterO = document.querySelector('.r3c1')
+            letterO.innerHTML = "O"
+            gameBoard[2][0] = "O"
+            console.log(gameBoard)
+            player1 = true
+            player2 = false 
+        }
+        gameTracker()
+    }
+}
+//Function for spot R3C2 determines either to place X or O and append to gameboard array accordingly
+const r3c2 = () => {
+    if(gameBoard[2][1]===" ") {
+        if(player1) {
+            let letterX = document.querySelector('.r3c2')
+            letterX.innerHTML = "X"
+            gameBoard[2][1] = "X"
+            console.log(gameBoard)
+            player1 = false
+            player2 = true
+        } else {
+            let letterO = document.querySelector('.r3c2')
+            letterO.innerHTML = "O"
+            gameBoard[2][1] = "O"
+            console.log(gameBoard)
+            player1 = true
+            player2 = false 
+        }
+        gameTracker()
+    }
+}
+//Function for spot R3C3 determines either to place X or O and append to gameboard array accordingly
+const r3c3 = () => {
+    if(gameBoard[2][2]===" ") {
+        if(player1) {
+            let letterX = document.querySelector('.r3c3')
+            letterX.innerHTML = "X"
+            gameBoard[2][2] = "X"
+            console.log(gameBoard)
+            player1 = false
+            player2 = true
+        } else {
+            let letterO = document.querySelector('.r3c3')
+            letterO.innerHTML = "O"
+            gameBoard[2][2] = "O"
+            console.log(gameBoard)
+            player1 = true
+            player2 = false 
+        }
+        gameTracker()
+    }
+}
 //Create a button for play again that resets the game

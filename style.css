@@ -5,9 +5,11 @@
 }
 
 .row1 div {
-    border: ridge green;
+    border: ridge;
     height: 100px;
     width: 100px;
+    font-size: 100px;
+    text-align: center;
 }    
 
 .row2 {
@@ -17,9 +19,11 @@
 }
 
 .row2 div {
-    border: ridge red;
+    border: ridge;
     height: 100px;
     width: 100px;
+    font-size: 100px;
+    text-align: center;
 }  
 
 .row3 {
@@ -29,7 +33,9 @@
 }
 
 .row3 div {
-    border: ridge blue;
+    border: ridge;
     height: 100px;
     width: 100px;
+    font-size: 100px;
+    text-align: center;
 }  
