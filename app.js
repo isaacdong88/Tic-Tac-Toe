@@ -51,38 +51,80 @@ const gameTracker = () => {
     }
     //Row 2 win check
     if(gameBoard[1][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[1][2] && gameBoard[1].includes(' ') === false) {
-        console.log('You Win')
-        winner = 'player'
+        if(player1===false) {
+            winner = 'Player1'
+            player1Win += 1
+        } else {
+            winner = 'Player2'
+            player2Win += 1
+        }
+        console.log(winner)
     }
     //Row 3 win check
     if(gameBoard[2][0]===gameBoard[2][1] && gameBoard[2][1]===gameBoard[2][2] && gameBoard[2].includes(' ') === false) {
-        console.log('You Win')
-        winner = 'player'
+        if(player1===false) {
+            winner = 'Player1'
+            player1Win += 1
+        } else {
+            winner = 'Player2'
+            player2Win += 1
+        }
+        console.log(winner)
     }
     //Column 1 win check
     if(gameBoard[0][0]===gameBoard[1][0] && gameBoard[1][0]===gameBoard[2][0] && gameBoard[0][0].includes(' ') === false ) {
-        console.log('You Win')
-        winner = 'player'
+        if(player1===false) {
+            winner = 'Player1'
+            player1Win += 1
+        } else {
+            winner = 'Player2'
+            player2Win += 1
+        }
+        console.log(winner)
     }
     //Column 2 win check
     if(gameBoard[0][1]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][1] && gameBoard[0][1].includes(' ') === false ) {
-        console.log('You Win')
-        winner = 'player'
+        if(player1===false) {
+            winner = 'Player1'
+            player1Win += 1
+        } else {
+            winner = 'Player2'
+            player2Win += 1
+        }
+        console.log(winner)
     }
     //Column 3 win check
     if(gameBoard[0][2]===gameBoard[1][2] && gameBoard[1][2]===gameBoard[2][2] && gameBoard[0][2].includes(' ') === false ) {
-        console.log('You Win')
-        winner = 'player'
+        if(player1===false) {
+            winner = 'Player1'
+            player1Win += 1
+        } else {
+            winner = 'Player2'
+            player2Win += 1
+        }
+        console.log(winner)
     }
     //Diagonal win check '\'
     if(gameBoard[0][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][2] && gameBoard[0][0].includes(' ') === false ) {
-        console.log('You Win')
-        winner = 'player'
+        if(player1===false) {
+            winner = 'Player1'
+            player1Win += 1
+        } else {
+            winner = 'Player2'
+            player2Win += 1
+        }
+        console.log(winner)
     }
     //Diagonal win check '/'
     if(gameBoard[0][2]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][0] && gameBoard[0][2].includes(' ') === false ) {
-        console.log('You Win')
-        winner = 'player'
+        if(player1===false) {
+            winner = 'Player1'
+            player1Win += 1
+        } else {
+            winner = 'Player2'
+            player2Win += 1
+        }
+        console.log(winner)
     }
     //check for tie
     if (gameBoard[0].includes(' ')===false && gameBoard[1].includes(' ')===false && gameBoard[2].includes(' ')===false && winner==='') {
@@ -131,7 +173,7 @@ const newRound = () => {
 
 //Function for spot R1C1 determines either to place X or O and append to gameboard array accordingly
 const r1c1 = () => {
-    if(gameBoard[0][0]===" ") {
+    if(gameBoard[0][0]===" " && winner==="") {
         if(player1) {
             let letterX = document.querySelector('.r1c1')
             letterX.innerHTML = "X"
@@ -158,7 +200,7 @@ const r1c1 = () => {
 }
 //Function for spot R1C2 determines either to place X or O and append to gameboard array accordingly
 const r1c2 = () => {
-    if(gameBoard[0][1]===" ") {
+    if(gameBoard[0][1]===" " && winner==="") {
         if(player1) {
             let letterX = document.querySelector('.r1c2')
             letterX.innerHTML = "X"
@@ -185,7 +227,7 @@ const r1c2 = () => {
 }
 //Function for spot R1C3 determines either to place X or O and append to gameboard array accordingly
 const r1c3 = () => {
-    if(gameBoard[0][2]===" ") {
+    if(gameBoard[0][2]===" " && winner==="") {
         if(player1) {
             let letterX = document.querySelector('.r1c3')
             letterX.innerHTML = "X"
@@ -212,7 +254,7 @@ const r1c3 = () => {
 }
 //Function for spot R2C1 determines either to place X or O and append to gameboard array accordingly
 const r2c1 = () => {
-    if(gameBoard[1][0]===" ") {
+    if(gameBoard[1][0]===" " && winner==="") {
         if(player1) {
             let letterX = document.querySelector('.r2c1')
             letterX.innerHTML = "X"
@@ -239,7 +281,7 @@ const r2c1 = () => {
 }
 //Function for spot R2C2 determines either to place X or O and append to gameboard array accordingly
 const r2c2 = () => {
-    if(gameBoard[1][1]===" ") {
+    if(gameBoard[1][1]===" " && winner==="") {
         if(player1) {
             let letterX = document.querySelector('.r2c2')
             letterX.innerHTML = "X"
@@ -266,7 +308,7 @@ const r2c2 = () => {
 }
 //Function for spot R2C3 determines either to place X or O and append to gameboard array accordingly
 const r2c3 = () => {
-    if(gameBoard[1][2]===" ") {
+    if(gameBoard[1][2]===" " && winner==="") {
         if(player1) {
             let letterX = document.querySelector('.r2c3')
             letterX.innerHTML = "X"
@@ -293,7 +335,7 @@ const r2c3 = () => {
 }
 //Function for spot R3C1 determines either to place X or O and append to gameboard array accordingly
 const r3c1 = () => {
-    if(gameBoard[2][0]===" ") {
+    if(gameBoard[2][0]===" " && winner==="") {
         if(player1) {
             let letterX = document.querySelector('.r3c1')
             letterX.innerHTML = "X"
@@ -320,7 +362,7 @@ const r3c1 = () => {
 }
 //Function for spot R3C2 determines either to place X or O and append to gameboard array accordingly
 const r3c2 = () => {
-    if(gameBoard[2][1]===" ") {
+    if(gameBoard[2][1]===" " && winner==="") {
         if(player1) {
             let letterX = document.querySelector('.r3c2')
             letterX.innerHTML = "X"
@@ -347,7 +389,7 @@ const r3c2 = () => {
 }
 //Function for spot R3C3 determines either to place X or O and append to gameboard array accordingly
 const r3c3 = () => {
-    if(gameBoard[2][2]===" ") {
+    if(gameBoard[2][2]===" " && winner==="") {
         if(player1) {
             let letterX = document.querySelector('.r3c3')
             letterX.innerHTML = "X"
