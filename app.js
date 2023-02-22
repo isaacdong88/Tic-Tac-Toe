@@ -15,8 +15,9 @@ let gameBoard = [
 // Create Player1 and Player2 variables acts as on/off switch between turns
 let player1 = true
 let player2 = false
-console.log(gameBoard)
-console.log(gameBoard[0][1])
+//Keep track how many games each player won for to 2 matchs is the winner
+let player1Win = 0
+let player2Win = 0
 let winner = ''
 
 // Create functions that will track which spot each player go and determines either to draw a 'X' or an 'O' on the board. Will need one function for each spot
@@ -39,58 +40,41 @@ const gameTracker = () => {
     if(gameBoard[0][0]===gameBoard[0][1] && gameBoard[0][1]===gameBoard[0][2] && gameBoard[0].includes(' ') === false) {
         console.log('You Win')
         winner = 'player'
-    } else {
-        console.log('No Win')
     }
     //Row 2 win check
     if(gameBoard[1][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[1][2] && gameBoard[1].includes(' ') === false) {
         console.log('You Win')
         winner = 'player'
-    } else {
-        console.log('No Win')
     }
     //Row 3 win check
     if(gameBoard[2][0]===gameBoard[2][1] && gameBoard[2][1]===gameBoard[2][2] && gameBoard[2].includes(' ') === false) {
         console.log('You Win')
         winner = 'player'
-    } else {
-        console.log('No Win')
     }
     //Column 1 win check
     if(gameBoard[0][0]===gameBoard[1][0] && gameBoard[1][0]===gameBoard[2][0] && gameBoard[0][0].includes(' ') === false ) {
         console.log('You Win')
         winner = 'player'
-    } else {
-        console.log('No Win')
     }
-    
     //Column 2 win check
     if(gameBoard[0][1]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][1] && gameBoard[0][1].includes(' ') === false ) {
         console.log('You Win')
         winner = 'player'
-    } else {
-        console.log('No Win')
     }
     //Column 3 win check
     if(gameBoard[0][2]===gameBoard[1][2] && gameBoard[1][2]===gameBoard[2][2] && gameBoard[0][2].includes(' ') === false ) {
         console.log('You Win')
         winner = 'player'
-    } else {
-        console.log('No Win')
     }
     //Diagonal win check '\'
     if(gameBoard[0][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][2] && gameBoard[0][0].includes(' ') === false ) {
         console.log('You Win')
         winner = 'player'
-    } else {
-        console.log('No Win')
     }
     //Diagonal win check '/'
     if(gameBoard[0][2]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][0] && gameBoard[0][2].includes(' ') === false ) {
         console.log('You Win')
         winner = 'player'
-    } else {
-        console.log('No Win')
     }
     //check for tie
     if (gameBoard[0].includes(' ')===false && gameBoard[1].includes(' ')===false && gameBoard[2].includes(' ')===false && winner==='') {
