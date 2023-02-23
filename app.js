@@ -249,7 +249,6 @@ const r1c1 = () => {
             let letterX = document.querySelector('.r1c1')
             letterX.innerHTML = "X"
             gameBoard[0][0] = "X"
-            console.log(gameBoard)
             player1 = false
             player2 = true
             nameX.style.backgroundColor = ''
@@ -262,7 +261,6 @@ const r1c1 = () => {
             let letterO = document.querySelector('.r1c1')
             letterO.innerHTML = "O"
             gameBoard[0][0] = "O"
-            console.log(gameBoard)
             player1 = true
             player2 = false
             nameX.style.backgroundColor = 'green'
@@ -281,7 +279,6 @@ const r1c2 = () => {
             let letterX = document.querySelector('.r1c2')
             letterX.innerHTML = "X"
             gameBoard[0][1] = "X"
-            console.log(gameBoard)
             player1 = false
             player2 = true
             nameX.style.backgroundColor = ''
@@ -293,7 +290,6 @@ const r1c2 = () => {
             let letterO = document.querySelector('.r1c2')
             letterO.innerHTML = "O"
             gameBoard[0][1] = "O"
-            console.log(gameBoard)
             player1 = true
             player2 = false
             nameX.style.backgroundColor = 'green'
@@ -312,7 +308,6 @@ const r1c3 = () => {
             let letterX = document.querySelector('.r1c3')
             letterX.innerHTML = "X"
             gameBoard[0][2] = "X"
-            console.log(gameBoard)
             player1 = false
             player2 = true
             nameX.style.backgroundColor = ''
@@ -324,7 +319,6 @@ const r1c3 = () => {
             let letterO = document.querySelector('.r1c3')
             letterO.innerHTML = "O"
             gameBoard[0][2] = "O"
-            console.log(gameBoard)
             player1 = true
             player2 = false
             nameX.style.backgroundColor = 'green'
@@ -343,7 +337,6 @@ const r2c1 = () => {
             let letterX = document.querySelector('.r2c1')
             letterX.innerHTML = "X"
             gameBoard[1][0] = "X"
-            console.log(gameBoard)
             player1 = false
             player2 = true
             nameX.style.backgroundColor = ''
@@ -355,7 +348,6 @@ const r2c1 = () => {
             let letterO = document.querySelector('.r2c1')
             letterO.innerHTML = "O"
             gameBoard[1][0] = "O"
-            console.log(gameBoard)
             player1 = true
             player2 = false
             nameX.style.backgroundColor = 'green'
@@ -374,7 +366,6 @@ const r2c2 = () => {
             let letterX = document.querySelector('.r2c2')
             letterX.innerHTML = "X"
             gameBoard[1][1] = "X"
-            console.log(gameBoard)
             player1 = false
             player2 = true
             nameX.style.backgroundColor = ''
@@ -386,7 +377,6 @@ const r2c2 = () => {
             let letterO = document.querySelector('.r2c2')
             letterO.innerHTML = "O"
             gameBoard[1][1] = "O"
-            console.log(gameBoard)
             player1 = true
             player2 = false 
             nameX.style.backgroundColor = 'green'
@@ -405,7 +395,6 @@ const r2c3 = () => {
             let letterX = document.querySelector('.r2c3')
             letterX.innerHTML = "X"
             gameBoard[1][2] = "X"
-            console.log(gameBoard)
             player1 = false
             player2 = true
             nameX.style.backgroundColor = ''
@@ -417,7 +406,6 @@ const r2c3 = () => {
             let letterO = document.querySelector('.r2c3')
             letterO.innerHTML = "O"
             gameBoard[1][2] = "O"
-            console.log(gameBoard)
             player1 = true
             player2 = false 
             nameX.style.backgroundColor = 'green'
@@ -436,7 +424,6 @@ const r3c1 = () => {
             let letterX = document.querySelector('.r3c1')
             letterX.innerHTML = "X"
             gameBoard[2][0] = "X"
-            console.log(gameBoard)
             player1 = false
             player2 = true
             nameX.style.backgroundColor = ''
@@ -448,7 +435,6 @@ const r3c1 = () => {
             let letterO = document.querySelector('.r3c1')
             letterO.innerHTML = "O"
             gameBoard[2][0] = "O"
-            console.log(gameBoard)
             player1 = true
             player2 = false
             nameX.style.backgroundColor = 'green'
@@ -467,7 +453,6 @@ const r3c2 = () => {
             let letterX = document.querySelector('.r3c2')
             letterX.innerHTML = "X"
             gameBoard[2][1] = "X"
-            console.log(gameBoard)
             player1 = false
             player2 = true
             nameX.style.backgroundColor = ''
@@ -479,7 +464,6 @@ const r3c2 = () => {
             let letterO = document.querySelector('.r3c2')
             letterO.innerHTML = "O"
             gameBoard[2][1] = "O"
-            console.log(gameBoard)
             player1 = true
             player2 = false
             nameX.style.backgroundColor = 'green'
@@ -498,7 +482,6 @@ const r3c3 = () => {
             let letterX = document.querySelector('.r3c3')
             letterX.innerHTML = "X"
             gameBoard[2][2] = "X"
-            console.log(gameBoard)
             player1 = false
             player2 = true
             nameX.style.backgroundColor = ''
@@ -510,7 +493,6 @@ const r3c3 = () => {
             let letterO = document.querySelector('.r3c3')
             letterO.innerHTML = "O"
             gameBoard[2][2] = "O"
-            console.log(gameBoard)
             player1 = true
             player2 = false 
             nameX.style.backgroundColor = 'green'
