@@ -39,6 +39,10 @@ const scoreX = document.querySelector('.scoreX')
 const scoreO = document.querySelector('.scoreO')
 //Query Select the next round button, will also function as play again button
 const nextBtn = document.querySelector('.nextBtn')
+//Query Select the name div show style will change will its the players turn
+const nameX = document.querySelector('.nameX')
+const nameO = document.querySelector('.nameO')
+nameX.style.backgroundColor = 'green'
 
 const gameTracker = () => {
     // Row 1 win check
@@ -186,10 +190,14 @@ const newRound = () => {
         player1 = false
         player2 = true
         wentFirst = ''
+        nameX.style.backgroundColor = ''
+        nameO.style.backgroundColor = 'green'
     } else {
         player1 = true
         player2 = false
         wentFirst = ''
+        nameX.style.backgroundColor = 'green'
+        nameO.style.backgroundColor = ''
     }
     //Condition resets the whole match after one player wins the match winning two rounds first
     if(nextBtn.innerHTML==='Play Again'){
@@ -213,6 +221,8 @@ const r1c1 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            nameX.style.backgroundColor = ''
+            nameO.style.backgroundColor = 'green'
             //Condtion to keep track who went first
             if(wentFirst==="") {
                 wentFirst = "X"
@@ -223,7 +233,9 @@ const r1c1 = () => {
             gameBoard[0][0] = "O"
             console.log(gameBoard)
             player1 = true
-            player2 = false 
+            player2 = false
+            nameX.style.backgroundColor = 'green'
+            nameO.style.backgroundColor = '' 
             if(wentFirst==="") {
                 wentFirst = "O"
             }
@@ -241,6 +253,8 @@ const r1c2 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            nameX.style.backgroundColor = ''
+            nameO.style.backgroundColor = 'green'
             if(wentFirst==="") {
                 wentFirst = "X"
             }
@@ -251,6 +265,8 @@ const r1c2 = () => {
             console.log(gameBoard)
             player1 = true
             player2 = false
+            nameX.style.backgroundColor = 'green'
+            nameO.style.backgroundColor = '' 
             if(wentFirst==="") {
                 wentFirst = "O"
             } 
@@ -268,6 +284,8 @@ const r1c3 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            nameX.style.backgroundColor = ''
+            nameO.style.backgroundColor = 'green'
             if(wentFirst==="") {
                 wentFirst = "X"
             }
@@ -278,6 +296,8 @@ const r1c3 = () => {
             console.log(gameBoard)
             player1 = true
             player2 = false
+            nameX.style.backgroundColor = 'green'
+            nameO.style.backgroundColor = '' 
             if(wentFirst==="") {
                 wentFirst = "O"
             } 
@@ -295,6 +315,8 @@ const r2c1 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            nameX.style.backgroundColor = ''
+            nameO.style.backgroundColor = 'green'
             if(wentFirst==="") {
                 wentFirst = "X"
             }
@@ -304,7 +326,9 @@ const r2c1 = () => {
             gameBoard[1][0] = "O"
             console.log(gameBoard)
             player1 = true
-            player2 = false 
+            player2 = false
+            nameX.style.backgroundColor = 'green'
+            nameO.style.backgroundColor = ''  
             if(wentFirst==="") {
                 wentFirst = "O"
             }
@@ -322,6 +346,8 @@ const r2c2 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            nameX.style.backgroundColor = ''
+            nameO.style.backgroundColor = 'green'
             if(wentFirst==="") {
                 wentFirst = "X"
             }
@@ -332,6 +358,8 @@ const r2c2 = () => {
             console.log(gameBoard)
             player1 = true
             player2 = false 
+            nameX.style.backgroundColor = 'green'
+            nameO.style.backgroundColor = '' 
             if(wentFirst==="") {
                 wentFirst = "O"
             }
@@ -349,6 +377,8 @@ const r2c3 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            nameX.style.backgroundColor = ''
+            nameO.style.backgroundColor = 'green'
             if(wentFirst==="") {
                 wentFirst = "X"
             }
@@ -359,6 +389,8 @@ const r2c3 = () => {
             console.log(gameBoard)
             player1 = true
             player2 = false 
+            nameX.style.backgroundColor = 'green'
+            nameO.style.backgroundColor = '' 
             if(wentFirst==="") {
                 wentFirst = "O"
             }
@@ -376,6 +408,8 @@ const r3c1 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            nameX.style.backgroundColor = ''
+            nameO.style.backgroundColor = 'green'
             if(wentFirst==="") {
                 wentFirst = "X"
             }
@@ -385,7 +419,9 @@ const r3c1 = () => {
             gameBoard[2][0] = "O"
             console.log(gameBoard)
             player1 = true
-            player2 = false 
+            player2 = false
+            nameX.style.backgroundColor = 'green'
+            nameO.style.backgroundColor = ''  
             if(wentFirst==="") {
                 wentFirst = "O"
             }
@@ -403,6 +439,8 @@ const r3c2 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            nameX.style.backgroundColor = ''
+            nameO.style.backgroundColor = 'green'
             if(wentFirst==="") {
                 wentFirst = "X"
             }
@@ -412,7 +450,9 @@ const r3c2 = () => {
             gameBoard[2][1] = "O"
             console.log(gameBoard)
             player1 = true
-            player2 = false 
+            player2 = false
+            nameX.style.backgroundColor = 'green'
+            nameO.style.backgroundColor = ''  
             if(wentFirst==="") {
                 wentFirst = "O"
             }
@@ -430,6 +470,8 @@ const r3c3 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            nameX.style.backgroundColor = ''
+            nameO.style.backgroundColor = 'green'
             if(wentFirst==="") {
                 wentFirst = "X"
             }
@@ -440,6 +482,8 @@ const r3c3 = () => {
             console.log(gameBoard)
             player1 = true
             player2 = false 
+            nameX.style.backgroundColor = 'green'
+            nameO.style.backgroundColor = '' 
             if(wentFirst==="") {
                 wentFirst = "O"
             }
@@ -447,4 +491,3 @@ const r3c3 = () => {
         gameTracker()
     }
 }
-//Create a button for play again that resets the game
