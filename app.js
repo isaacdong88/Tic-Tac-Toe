@@ -133,7 +133,7 @@ const gameTracker = () => {
     }
 }
 // gameTracker()
-//Game reset function
+//Game reset function, resets all values
 const newRound = () => {
     gameBoard = [
     [' ',' ',' '],
@@ -161,6 +161,7 @@ const newRound = () => {
     r3c2.innerHTML = ''
     let r3c3 = document.querySelector('.r3c3')
     r3c3.innerHTML = ''
+    //Condition checks who went first to set up next match so the other player starts
     if(wentFirst==="X") {
         player1 = false
         player2 = true
@@ -184,6 +185,7 @@ const r1c1 = () => {
             console.log(gameBoard)
             player1 = false
             player2 = true
+            //Condtion to keep track who went first
             if(wentFirst==="") {
                 wentFirst = "X"
             }
