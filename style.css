@@ -7,7 +7,7 @@ body {
 }
 
 .gameBoard {
-    border: ridge;
+    border: groove;
     height: 380px;
     width: 380px;
     display: flex;
@@ -18,7 +18,7 @@ body {
 }
 
 .title {
-    border: groove;
+    /* border: groove; */
     width: 300px;
     text-align: center;
     font-size: 25px;
@@ -29,10 +29,11 @@ body {
     display: flex;
     height: 100px;
     width: 300px;
+    border-bottom: solid 8px black;
 }
 
 .row1 div {
-    border: ridge;
+    /* border: ridge; */
     height: 100px;
     width: 100px;
     font-size: 100px;
@@ -43,10 +44,11 @@ body {
     display: flex;
     height: 100px;
     width: 300px;
+    border-bottom: solid 8px black;
 }
 
 .row2 div {
-    border: ridge;
+    /* border: ridge; */
     height: 100px;
     width: 100px;
     font-size: 100px;
@@ -60,15 +62,19 @@ body {
 }
 
 .row3 div {
-    border: ridge;
+    /* border: ridge; */
     height: 100px;
     width: 100px;
     font-size: 100px;
     text-align: center;
-}  
+}
+
+.r1c1, .r2c1, .r3c1, .r1c2, .r2c2, .r3c2 {
+    border-right: solid 8px black;
+}
 
 .scoreBoard {
-    border: ridge;
+    border: groove;
     width: 380px;
     height: 150px;
     display: flex;
