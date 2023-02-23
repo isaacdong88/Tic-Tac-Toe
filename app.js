@@ -18,6 +18,7 @@ let player2 = false
 //Keep track how many games each player won for to 2 matchs is the winner
 let player1Win = 0
 let player2Win = 0
+//Keep track of the winner
 let winner = ''
 //Keep tracks who went first, so each round alternates
 let wentFirst = ''
@@ -33,9 +34,9 @@ let wentFirst = ''
 //(r1c1,r2c1,r3c1), (r1c2,r2c2,r3c2), (r1c3,r2c3,r3c3)
 //(r1c1,r2c2,r3c3), (r1c3,r2c2,r3c1)
 
-//A condition that will only allow player to place on empty spot
-
-//When a player goes will grab the innerhtml of that div to determine where to append to gameboard array
+//Query Select the scoreboards divs to append scores to the display
+const scoreX = document.querySelector('.scoreX')
+const scoreO = document.querySelector('.scoreO')
 
 const gameTracker = () => {
     // Row 1 win check
@@ -173,8 +174,10 @@ const newRound = () => {
 
 //Function for spot R1C1 determines either to place X or O and append to gameboard array accordingly
 const r1c1 = () => {
+    //A condition that will only allow player to place on empty spot
     if(gameBoard[0][0]===" " && winner==="") {
         if(player1) {
+            //When a player goes will grab the innerhtml of that div to determine where to append to gameboard array
             let letterX = document.querySelector('.r1c1')
             letterX.innerHTML = "X"
             gameBoard[0][0] = "X"
