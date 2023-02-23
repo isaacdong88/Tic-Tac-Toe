@@ -56,7 +56,6 @@ const gameTracker = () => {
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
-        console.log(winner)
     }
     //Row 2 win check
     else if(gameBoard[1][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[1][2] && gameBoard[1].includes(' ') === false) {
@@ -69,7 +68,6 @@ const gameTracker = () => {
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
-        console.log(winner)
     }
     //Row 3 win check
     else if(gameBoard[2][0]===gameBoard[2][1] && gameBoard[2][1]===gameBoard[2][2] && gameBoard[2].includes(' ') === false) {
@@ -82,7 +80,6 @@ const gameTracker = () => {
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
-        console.log(winner)
     }
     //Column 1 win check
     else if(gameBoard[0][0]===gameBoard[1][0] && gameBoard[1][0]===gameBoard[2][0] && gameBoard[0][0].includes(' ') === false ) {
@@ -95,7 +92,6 @@ const gameTracker = () => {
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
-        console.log(winner)
     }
     //Column 2 win check
     else if(gameBoard[0][1]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][1] && gameBoard[0][1].includes(' ') === false ) {
@@ -108,7 +104,6 @@ const gameTracker = () => {
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
-        console.log(winner)
     }
     //Column 3 win check
     else if(gameBoard[0][2]===gameBoard[1][2] && gameBoard[1][2]===gameBoard[2][2] && gameBoard[0][2].includes(' ') === false ) {
@@ -121,7 +116,6 @@ const gameTracker = () => {
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
-        console.log(winner)
     }
     //Diagonal win check '\'
     else if(gameBoard[0][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][2] && gameBoard[0][0].includes(' ') === false ) {
@@ -134,7 +128,6 @@ const gameTracker = () => {
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
-        console.log(winner)
     }
     //Diagonal win check '/'
     else if(gameBoard[0][2]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][0] && gameBoard[0][2].includes(' ') === false ) {
@@ -147,11 +140,10 @@ const gameTracker = () => {
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
-        console.log(winner)
     }
     //check for tie
     else if (gameBoard[0].includes(' ')===false && gameBoard[1].includes(' ')===false && gameBoard[2].includes(' ')===false && winner==='') {
-        console.log('Tie')
+
     }
     //Condition to check player to first reach 2 wins, change next button to play again starts whole new game
     if(player1Win===2 || player2Win===2) {
