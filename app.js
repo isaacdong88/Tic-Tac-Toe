@@ -149,6 +149,10 @@ const gameTracker = () => {
     else if (gameBoard[0].includes(' ')===false && gameBoard[1].includes(' ')===false && gameBoard[2].includes(' ')===false && winner==='') {
         console.log('Tie')
     }
+    //Condition to check player to first reach 2 wins, change next button to play again starts whole new game
+    if(player1Win===2 || player2Win===2) {
+        nextBtn.innerHTML = 'Play Again'
+    }
 }
 
 //Game reset function, resets values. Onclick event on next round button
