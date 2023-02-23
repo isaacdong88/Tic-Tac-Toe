@@ -190,6 +190,26 @@ const newRound = () => {
         nextBtn.innerHTML = 'Next Round'
     }
 }
+//initialize function for player turns to reduce repetitive
+const turnO = () => {
+    player1 = false
+    player2 = true
+    nameX.style.backgroundColor = ''
+    nameO.style.backgroundColor = 'green'
+    //Condtion to keep track who went first
+    if(wentFirst==="") {
+        wentFirst = "X"
+    }
+}
+const turnX = () => {
+    player1 = true
+    player2 = false
+    nameX.style.backgroundColor = 'green'
+    nameO.style.backgroundColor = '' 
+    if(wentFirst==="") {
+        wentFirst = "O"
+    }
+}
 
 //Function for spot R1C1 determines either to place X or O and append to gameboard array accordingly
 const r1c1 = () => {
@@ -200,25 +220,12 @@ const r1c1 = () => {
             let letterX = document.querySelector('.r1c1')
             letterX.innerHTML = "X"
             gameBoard[0][0] = "X"
-            player1 = false
-            player2 = true
-            nameX.style.backgroundColor = ''
-            nameO.style.backgroundColor = 'green'
-            //Condtion to keep track who went first
-            if(wentFirst==="") {
-                wentFirst = "X"
-            }
+            turnO()
         } else {
             let letterO = document.querySelector('.r1c1')
             letterO.innerHTML = "O"
             gameBoard[0][0] = "O"
-            player1 = true
-            player2 = false
-            nameX.style.backgroundColor = 'green'
-            nameO.style.backgroundColor = '' 
-            if(wentFirst==="") {
-                wentFirst = "O"
-            }
+            turnX()
         }
         gameTracker()
     }
@@ -230,24 +237,12 @@ const r1c2 = () => {
             let letterX = document.querySelector('.r1c2')
             letterX.innerHTML = "X"
             gameBoard[0][1] = "X"
-            player1 = false
-            player2 = true
-            nameX.style.backgroundColor = ''
-            nameO.style.backgroundColor = 'green'
-            if(wentFirst==="") {
-                wentFirst = "X"
-            }
+            turnO()
         } else {
             let letterO = document.querySelector('.r1c2')
             letterO.innerHTML = "O"
             gameBoard[0][1] = "O"
-            player1 = true
-            player2 = false
-            nameX.style.backgroundColor = 'green'
-            nameO.style.backgroundColor = '' 
-            if(wentFirst==="") {
-                wentFirst = "O"
-            } 
+            turnX()
         }
         gameTracker()
     }
@@ -259,24 +254,12 @@ const r1c3 = () => {
             let letterX = document.querySelector('.r1c3')
             letterX.innerHTML = "X"
             gameBoard[0][2] = "X"
-            player1 = false
-            player2 = true
-            nameX.style.backgroundColor = ''
-            nameO.style.backgroundColor = 'green'
-            if(wentFirst==="") {
-                wentFirst = "X"
-            }
+            turnO()
         } else {
             let letterO = document.querySelector('.r1c3')
             letterO.innerHTML = "O"
             gameBoard[0][2] = "O"
-            player1 = true
-            player2 = false
-            nameX.style.backgroundColor = 'green'
-            nameO.style.backgroundColor = '' 
-            if(wentFirst==="") {
-                wentFirst = "O"
-            } 
+            turnX()
         }
         gameTracker()
     }
@@ -288,24 +271,12 @@ const r2c1 = () => {
             let letterX = document.querySelector('.r2c1')
             letterX.innerHTML = "X"
             gameBoard[1][0] = "X"
-            player1 = false
-            player2 = true
-            nameX.style.backgroundColor = ''
-            nameO.style.backgroundColor = 'green'
-            if(wentFirst==="") {
-                wentFirst = "X"
-            }
+            turnO()
         } else {
             let letterO = document.querySelector('.r2c1')
             letterO.innerHTML = "O"
             gameBoard[1][0] = "O"
-            player1 = true
-            player2 = false
-            nameX.style.backgroundColor = 'green'
-            nameO.style.backgroundColor = ''  
-            if(wentFirst==="") {
-                wentFirst = "O"
-            }
+            turnX()
         }
         gameTracker()
     }
@@ -317,24 +288,12 @@ const r2c2 = () => {
             let letterX = document.querySelector('.r2c2')
             letterX.innerHTML = "X"
             gameBoard[1][1] = "X"
-            player1 = false
-            player2 = true
-            nameX.style.backgroundColor = ''
-            nameO.style.backgroundColor = 'green'
-            if(wentFirst==="") {
-                wentFirst = "X"
-            }
+            turnO()
         } else {
             let letterO = document.querySelector('.r2c2')
             letterO.innerHTML = "O"
             gameBoard[1][1] = "O"
-            player1 = true
-            player2 = false 
-            nameX.style.backgroundColor = 'green'
-            nameO.style.backgroundColor = '' 
-            if(wentFirst==="") {
-                wentFirst = "O"
-            }
+            turnX()
         }
         gameTracker()
     }
@@ -346,24 +305,12 @@ const r2c3 = () => {
             let letterX = document.querySelector('.r2c3')
             letterX.innerHTML = "X"
             gameBoard[1][2] = "X"
-            player1 = false
-            player2 = true
-            nameX.style.backgroundColor = ''
-            nameO.style.backgroundColor = 'green'
-            if(wentFirst==="") {
-                wentFirst = "X"
-            }
+            turnO()
         } else {
             let letterO = document.querySelector('.r2c3')
             letterO.innerHTML = "O"
             gameBoard[1][2] = "O"
-            player1 = true
-            player2 = false 
-            nameX.style.backgroundColor = 'green'
-            nameO.style.backgroundColor = '' 
-            if(wentFirst==="") {
-                wentFirst = "O"
-            }
+            turnX()
         }
         gameTracker()
     }
@@ -375,24 +322,12 @@ const r3c1 = () => {
             let letterX = document.querySelector('.r3c1')
             letterX.innerHTML = "X"
             gameBoard[2][0] = "X"
-            player1 = false
-            player2 = true
-            nameX.style.backgroundColor = ''
-            nameO.style.backgroundColor = 'green'
-            if(wentFirst==="") {
-                wentFirst = "X"
-            }
+            turnO()
         } else {
             let letterO = document.querySelector('.r3c1')
             letterO.innerHTML = "O"
             gameBoard[2][0] = "O"
-            player1 = true
-            player2 = false
-            nameX.style.backgroundColor = 'green'
-            nameO.style.backgroundColor = ''  
-            if(wentFirst==="") {
-                wentFirst = "O"
-            }
+            turnX()
         }
         gameTracker()
     }
@@ -404,24 +339,12 @@ const r3c2 = () => {
             let letterX = document.querySelector('.r3c2')
             letterX.innerHTML = "X"
             gameBoard[2][1] = "X"
-            player1 = false
-            player2 = true
-            nameX.style.backgroundColor = ''
-            nameO.style.backgroundColor = 'green'
-            if(wentFirst==="") {
-                wentFirst = "X"
-            }
+            turnO()
         } else {
             let letterO = document.querySelector('.r3c2')
             letterO.innerHTML = "O"
             gameBoard[2][1] = "O"
-            player1 = true
-            player2 = false
-            nameX.style.backgroundColor = 'green'
-            nameO.style.backgroundColor = ''  
-            if(wentFirst==="") {
-                wentFirst = "O"
-            }
+            turnX()
         }
         gameTracker()
     }
@@ -433,24 +356,12 @@ const r3c3 = () => {
             let letterX = document.querySelector('.r3c3')
             letterX.innerHTML = "X"
             gameBoard[2][2] = "X"
-            player1 = false
-            player2 = true
-            nameX.style.backgroundColor = ''
-            nameO.style.backgroundColor = 'green'
-            if(wentFirst==="") {
-                wentFirst = "X"
-            }
+            turnO()
         } else {
             let letterO = document.querySelector('.r3c3')
             letterO.innerHTML = "O"
             gameBoard[2][2] = "O"
-            player1 = true
-            player2 = false 
-            nameX.style.backgroundColor = 'green'
-            nameO.style.backgroundColor = '' 
-            if(wentFirst==="") {
-                wentFirst = "O"
-            }
+            turnX()
         }
         gameTracker()
     }
