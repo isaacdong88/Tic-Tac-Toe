@@ -1,3 +1,21 @@
+.gameBoard {
+    border: ridge;
+    height: 380px;
+    width: 380px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.title {
+    border: ridge;
+    width: 300px;
+    text-align: center;
+    font-size: 25px;
+}
+
 .row1 {
     display: flex;
     height: 100px;
@@ -39,3 +57,32 @@
     font-size: 100px;
     text-align: center;
 }  
+
+.scoreBoard {
+    border: ridge;
+    width: 380px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.playerScores {
+    /* border: ridge; */
+    width: 100%;
+    height: 110px;
+    display: flex;
+}
+
+.playerX, .playerO, .scores {
+    border: ridge;
+    width: 33%;
+    height: 110px;
+    text-align: center;
+}
+
+.playerX .nameX, .playerO .nameO {
+    border: ridge;
+    width: 100%;
+    height: 20px;
+}

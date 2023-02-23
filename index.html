@@ -12,6 +12,7 @@
     <body>
         <!-- Create 3x3 gameboard each position linked to gameboard array -->
         <div class="gameBoard">
+            <div class="title">Tic-Tac-Toe</div>
             <!-- each div will have onclick event that will execute a function -->
             <!-- Have initial innerHtml that will be used so can know which spot the player placed and append to gameboard array accordingly. CSS will not display at first but will switch styling so text appears when player places move -->
             <div class="row1">
@@ -30,7 +31,22 @@
                 <div class="r3c3" onclick="r3c3()"></div>
             </div>
         </div>
-        <button onclick="newRound()">Next Round</button>
+        <div class="scoreBoard">
+            <div class="playerScores">
+                <div class="playerX">
+                    <div class="nameX">Player X</div>
+                    <div class="scoreX">1</div>
+                </div>
+                <div class="scores">Scores</div>
+                <div class="playerO">
+                    <div class="nameO">Player O</div>
+                    <div class="scoreO">1</div>
+                </div>
+            </div>
+
+            <button onclick="newRound()">Next Round</button>
+        </div>
+
         
         <script src="app.js" async defer></script>
     </body>
