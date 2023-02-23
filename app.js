@@ -51,11 +51,15 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player X'
             player1Win += 1
+            rounds += 1
             scoreX.innerHTML = player1Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         } else {
             winner = 'Player O'
             player2Win += 1
+            rounds += 1
             scoreO.innerHTML = player2Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         }
     }
     //Row 2 win check
@@ -63,11 +67,15 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player X'
             player1Win += 1
+            rounds += 1
             scoreX.innerHTML = player1Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         } else {
             winner = 'Player O'
             player2Win += 1
+            rounds += 1
             scoreO.innerHTML = player2Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         }
     }
     //Row 3 win check
@@ -75,11 +83,15 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player X'
             player1Win += 1
+            rounds += 1
             scoreX.innerHTML = player1Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         } else {
             winner = 'Player O'
             player2Win += 1
+            rounds += 1
             scoreO.innerHTML = player2Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         }
     }
     //Column 1 win check
@@ -87,11 +99,15 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player X'
             player1Win += 1
+            rounds += 1
             scoreX.innerHTML = player1Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         } else {
             winner = 'Player O'
             player2Win += 1
+            rounds += 1
             scoreO.innerHTML = player2Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         }
     }
     //Column 2 win check
@@ -99,11 +115,15 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player X'
             player1Win += 1
+            rounds += 1
             scoreX.innerHTML = player1Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         } else {
             winner = 'Player O'
             player2Win += 1
+            rounds += 1
             scoreO.innerHTML = player2Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         }
     }
     //Column 3 win check
@@ -111,11 +131,15 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player X'
             player1Win += 1
+            rounds += 1
             scoreX.innerHTML = player1Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         } else {
             winner = 'Player O'
             player2Win += 1
+            rounds += 1
             scoreO.innerHTML = player2Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         }
     }
     //Diagonal win check '\'
@@ -123,11 +147,15 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player X'
             player1Win += 1
+            rounds += 1
             scoreX.innerHTML = player1Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         } else {
             winner = 'Player O'
             player2Win += 1
+            rounds += 1
             scoreO.innerHTML = player2Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         }
     }
     //Diagonal win check '/'
@@ -135,16 +163,22 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player X'
             player1Win += 1
+            rounds += 1
             scoreX.innerHTML = player1Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         } else {
             winner = 'Player O'
             player2Win += 1
+            rounds += 1
             scoreO.innerHTML = player2Win
+            message.innerHTML = `${winner} wins round ${rounds}`
         }
     }
     //check for tie
     else if (gameBoard[0].includes(' ')===false && gameBoard[1].includes(' ')===false && gameBoard[2].includes(' ')===false && winner==='') {
         winner = 'Tie'
+        rounds += 1
+        message.innerHTML = `Round ${rounds} ${winner}`
     }
     //Condition to check player to first reach 2 wins, change next button to play again starts whole new game
     if(player1Win===2 || player2Win===2) {
@@ -160,6 +194,7 @@ const newRound = () => {
     [' ',' ',' ']
     ]
     winner = ''
+    message.innerHTML = 'Scores'
     let r1c1 = document.querySelector('.r1c1')
     r1c1.innerHTML = ''
     let r1c2 = document.querySelector('.r1c2')
@@ -185,17 +220,19 @@ const newRound = () => {
         wentFirst = ''
         nameX.style.backgroundColor = ''
         nameO.style.backgroundColor = 'green'
-    } else {
+    } else if (wentFirst==="O") {
         player1 = true
         player2 = false
         wentFirst = ''
         nameX.style.backgroundColor = 'green'
         nameO.style.backgroundColor = ''
     }
+    wentFirst = ''
     //Condition resets the whole match after one player wins the match winning two rounds first
     if(nextBtn.innerHTML==='Play Again'){
         player1Win = 0
         player2Win = 0
+        rounds = 0
         scoreX.innerHTML = 0
         scoreO.innerHTML = 0
         nextBtn.innerHTML = 'Next Round'
