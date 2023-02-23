@@ -37,6 +37,8 @@ let wentFirst = ''
 //Query Select the scoreboards divs to append scores to the display
 const scoreX = document.querySelector('.scoreX')
 const scoreO = document.querySelector('.scoreO')
+//Query Select the next round button, will also function as play again button
+const nextBtn = document.querySelector('.nextBtn')
 
 const gameTracker = () => {
     // Row 1 win check
@@ -148,8 +150,8 @@ const gameTracker = () => {
         console.log('Tie')
     }
 }
-// gameTracker()
-//Game reset function, resets values
+
+//Game reset function, resets values. Onclick event on next round button
 const newRound = () => {
     gameBoard = [
     [' ',' ',' '],
