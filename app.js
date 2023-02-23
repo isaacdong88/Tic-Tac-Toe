@@ -45,133 +45,85 @@ nameX.style.backgroundColor = 'green'
 //Query select the score board so can update message to show wins and winner
 const message = document.querySelector('.scores')
 
+//initialize function for player wins to reduce lines of code and have reusable function
+const winnerX = () => {
+    winner = 'Player X'
+    player1Win += 1
+    rounds += 1
+    scoreX.innerHTML = player1Win
+    message.innerHTML = `${winner} wins round ${rounds}`
+}
+const winnerO = () => {
+    winner = 'Player O'
+    player2Win += 1
+    rounds += 1
+    scoreO.innerHTML = player2Win
+    message.innerHTML = `${winner} wins round ${rounds}`
+}
+
 const gameTracker = () => {
     // Row 1 win check
     if(gameBoard[0][0]===gameBoard[0][1] && gameBoard[0][1]===gameBoard[0][2] && gameBoard[0].includes(' ') === false) {
         if(player1===false) {
-            winner = 'Player X'
-            player1Win += 1
-            rounds += 1
-            scoreX.innerHTML = player1Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerX()
         } else {
-            winner = 'Player O'
-            player2Win += 1
-            rounds += 1
-            scoreO.innerHTML = player2Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerO()
         }
     }
     //Row 2 win check
     else if(gameBoard[1][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[1][2] && gameBoard[1].includes(' ') === false) {
         if(player1===false) {
-            winner = 'Player X'
-            player1Win += 1
-            rounds += 1
-            scoreX.innerHTML = player1Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerX()
         } else {
-            winner = 'Player O'
-            player2Win += 1
-            rounds += 1
-            scoreO.innerHTML = player2Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerO()
         }
     }
     //Row 3 win check
     else if(gameBoard[2][0]===gameBoard[2][1] && gameBoard[2][1]===gameBoard[2][2] && gameBoard[2].includes(' ') === false) {
         if(player1===false) {
-            winner = 'Player X'
-            player1Win += 1
-            rounds += 1
-            scoreX.innerHTML = player1Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerX()
         } else {
-            winner = 'Player O'
-            player2Win += 1
-            rounds += 1
-            scoreO.innerHTML = player2Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerO()
         }
     }
     //Column 1 win check
     else if(gameBoard[0][0]===gameBoard[1][0] && gameBoard[1][0]===gameBoard[2][0] && gameBoard[0][0].includes(' ') === false ) {
         if(player1===false) {
-            winner = 'Player X'
-            player1Win += 1
-            rounds += 1
-            scoreX.innerHTML = player1Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerX()
         } else {
-            winner = 'Player O'
-            player2Win += 1
-            rounds += 1
-            scoreO.innerHTML = player2Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerO()
         }
     }
     //Column 2 win check
     else if(gameBoard[0][1]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][1] && gameBoard[0][1].includes(' ') === false ) {
         if(player1===false) {
-            winner = 'Player X'
-            player1Win += 1
-            rounds += 1
-            scoreX.innerHTML = player1Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerX()
         } else {
-            winner = 'Player O'
-            player2Win += 1
-            rounds += 1
-            scoreO.innerHTML = player2Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerO()
         }
     }
     //Column 3 win check
     else if(gameBoard[0][2]===gameBoard[1][2] && gameBoard[1][2]===gameBoard[2][2] && gameBoard[0][2].includes(' ') === false ) {
         if(player1===false) {
-            winner = 'Player X'
-            player1Win += 1
-            rounds += 1
-            scoreX.innerHTML = player1Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerX()
         } else {
-            winner = 'Player O'
-            player2Win += 1
-            rounds += 1
-            scoreO.innerHTML = player2Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerO()
         }
     }
     //Diagonal win check '\'
     else if(gameBoard[0][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][2] && gameBoard[0][0].includes(' ') === false ) {
         if(player1===false) {
-            winner = 'Player X'
-            player1Win += 1
-            rounds += 1
-            scoreX.innerHTML = player1Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerX()
         } else {
-            winner = 'Player O'
-            player2Win += 1
-            rounds += 1
-            scoreO.innerHTML = player2Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerO()
         }
     }
     //Diagonal win check '/'
     else if(gameBoard[0][2]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][0] && gameBoard[0][2].includes(' ') === false ) {
         if(player1===false) {
-            winner = 'Player X'
-            player1Win += 1
-            rounds += 1
-            scoreX.innerHTML = player1Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerX()
         } else {
-            winner = 'Player O'
-            player2Win += 1
-            rounds += 1
-            scoreO.innerHTML = player2Win
-            message.innerHTML = `${winner} wins round ${rounds}`
+            winnerO()
         }
     }
     //check for tie
@@ -228,7 +180,6 @@ const newRound = () => {
         nameX.style.backgroundColor = 'green'
         nameO.style.backgroundColor = ''
     }
-    wentFirst = ''
     //Condition resets the whole match after one player wins the match winning two rounds first
     if(nextBtn.innerHTML==='Play Again'){
         player1Win = 0
