@@ -183,6 +183,7 @@ const gameTracker = () => {
     //Condition to check player to first reach 2 wins, change next button to play again starts whole new game
     if(player1Win===2 || player2Win===2) {
         nextBtn.innerHTML = 'Play Again'
+        message.innerHTML = `${winner} is the Winner!`
     }
 }
 
