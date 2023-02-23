@@ -191,6 +191,14 @@ const newRound = () => {
         player2 = false
         wentFirst = ''
     }
+    //Condition resets the whole match after one player wins the match winning two rounds first
+    if(nextBtn.innerHTML==='Play Again'){
+        player1Win = 0
+        player2Win = 0
+        scoreX.innerHTML = 0
+        scoreO.innerHTML = 0
+        nextBtn.innerHTML = 'Next Round'
+    }
 }
 
 //Function for spot R1C1 determines either to place X or O and append to gameboard array accordingly
