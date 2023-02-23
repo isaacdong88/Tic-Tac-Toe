@@ -3,6 +3,7 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    background-image: url('background.png');
 }
 
 .gameBoard {
@@ -17,10 +18,11 @@ body {
 }
 
 .title {
-    border: ridge;
+    border: groove;
     width: 300px;
     text-align: center;
     font-size: 25px;
+    font-weight: bold;
 }
 
 .row1 {
@@ -79,14 +81,16 @@ body {
     width: 100%;
     height: 110px;
     display: flex;
+    justify-content: space-evenly;
 }
 
 .playerX, .playerO, .scores {
     /* border: ridge; */
-    width: 33%;
+    width: 30%;
     height: 110px;
     text-align: center;
 }
+
 .scores, .scoreX, .scoreO {
     display: flex;
     justify-content: center;
@@ -98,10 +102,22 @@ body {
     border: ridge;
     width: 100%;
     height: 80px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 50px;
 }
 
 .playerX .nameX, .playerO .nameO {
     border: ridge;
     width: 100%;
     height: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-weight: bold;
+}
+
+button {
+    border: groove;
+    border-radius: 10px;
+    font-weight: bold;
 }
