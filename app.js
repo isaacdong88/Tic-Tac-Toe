@@ -44,9 +44,11 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
+            scoreX.innerHTML = player1Win
         } else {
             winner = 'Player2'
             player2Win += 1
+            scoreO.innerHTML = player2Win
         }
         console.log(winner)
     }
@@ -55,9 +57,11 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
+            scoreX.innerHTML = player1Win
         } else {
             winner = 'Player2'
             player2Win += 1
+            scoreO.innerHTML = player2Win
         }
         console.log(winner)
     }
@@ -66,9 +70,11 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
+            scoreX.innerHTML = player1Win
         } else {
             winner = 'Player2'
             player2Win += 1
+            scoreO.innerHTML = player2Win
         }
         console.log(winner)
     }
@@ -77,9 +83,11 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
+            scoreX.innerHTML = player1Win
         } else {
             winner = 'Player2'
             player2Win += 1
+            scoreO.innerHTML = player2Win
         }
         console.log(winner)
     }
@@ -88,9 +96,11 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
+            scoreX.innerHTML = player1Win
         } else {
             winner = 'Player2'
             player2Win += 1
+            scoreO.innerHTML = player2Win
         }
         console.log(winner)
     }
@@ -99,9 +109,11 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
+            scoreX.innerHTML = player1Win
         } else {
             winner = 'Player2'
             player2Win += 1
+            scoreO.innerHTML = player2Win
         }
         console.log(winner)
     }
@@ -110,9 +122,11 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
+            scoreX.innerHTML = player1Win
         } else {
             winner = 'Player2'
             player2Win += 1
+            scoreO.innerHTML = player2Win
         }
         console.log(winner)
     }
@@ -121,9 +135,11 @@ const gameTracker = () => {
         if(player1===false) {
             winner = 'Player1'
             player1Win += 1
+            scoreX.innerHTML = player1Win
         } else {
             winner = 'Player2'
             player2Win += 1
+            scoreO.innerHTML = player2Win
         }
         console.log(winner)
     }
@@ -133,15 +149,13 @@ const gameTracker = () => {
     }
 }
 // gameTracker()
-//Game reset function, resets all values
+//Game reset function, resets values
 const newRound = () => {
     gameBoard = [
     [' ',' ',' '],
     [' ',' ',' '],
     [' ',' ',' ']
     ]
-    player1Win = 0
-    player2Win = 0
     winner = ''
     let r1c1 = document.querySelector('.r1c1')
     r1c1.innerHTML = ''
