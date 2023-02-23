@@ -1,23 +1,22 @@
 // Create A gameboard array with three separate arrays for 3rows
-
 // let gameBoard = [
 //     ['r0c0','r0c1','r0c2'],
 //     ['r1c0','r1c1','r1c2'],
 //     ['r2c0','r2c1','r2c2']
 // ]
-
 let gameBoard = [
     [' ',' ',' '],
     [' ',' ',' '],
     [' ',' ',' ']
 ]
-
 // Create Player1 and Player2 variables acts as on/off switch between turns
 let player1 = true
 let player2 = false
 //Keep track how many games each player won for to 2 matchs is the winner
 let player1Win = 0
 let player2Win = 0
+//Keep track of rounds played
+let rounds = 0
 //Keep track of the winner
 let winner = ''
 //Keep tracks who went first, so each round alternates
@@ -43,16 +42,18 @@ const nextBtn = document.querySelector('.nextBtn')
 const nameX = document.querySelector('.nameX')
 const nameO = document.querySelector('.nameO')
 nameX.style.backgroundColor = 'green'
+//Query select the score board so can update message to show wins and winner
+const message = document.querySelector('.scores')
 
 const gameTracker = () => {
     // Row 1 win check
     if(gameBoard[0][0]===gameBoard[0][1] && gameBoard[0][1]===gameBoard[0][2] && gameBoard[0].includes(' ') === false) {
         if(player1===false) {
-            winner = 'Player1'
+            winner = 'Player X'
             player1Win += 1
             scoreX.innerHTML = player1Win
         } else {
-            winner = 'Player2'
+            winner = 'Player O'
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
@@ -60,11 +61,11 @@ const gameTracker = () => {
     //Row 2 win check
     else if(gameBoard[1][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[1][2] && gameBoard[1].includes(' ') === false) {
         if(player1===false) {
-            winner = 'Player1'
+            winner = 'Player X'
             player1Win += 1
             scoreX.innerHTML = player1Win
         } else {
-            winner = 'Player2'
+            winner = 'Player O'
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
@@ -72,11 +73,11 @@ const gameTracker = () => {
     //Row 3 win check
     else if(gameBoard[2][0]===gameBoard[2][1] && gameBoard[2][1]===gameBoard[2][2] && gameBoard[2].includes(' ') === false) {
         if(player1===false) {
-            winner = 'Player1'
+            winner = 'Player X'
             player1Win += 1
             scoreX.innerHTML = player1Win
         } else {
-            winner = 'Player2'
+            winner = 'Player O'
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
@@ -84,11 +85,11 @@ const gameTracker = () => {
     //Column 1 win check
     else if(gameBoard[0][0]===gameBoard[1][0] && gameBoard[1][0]===gameBoard[2][0] && gameBoard[0][0].includes(' ') === false ) {
         if(player1===false) {
-            winner = 'Player1'
+            winner = 'Player X'
             player1Win += 1
             scoreX.innerHTML = player1Win
         } else {
-            winner = 'Player2'
+            winner = 'Player O'
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
@@ -96,11 +97,11 @@ const gameTracker = () => {
     //Column 2 win check
     else if(gameBoard[0][1]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][1] && gameBoard[0][1].includes(' ') === false ) {
         if(player1===false) {
-            winner = 'Player1'
+            winner = 'Player X'
             player1Win += 1
             scoreX.innerHTML = player1Win
         } else {
-            winner = 'Player2'
+            winner = 'Player O'
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
@@ -108,11 +109,11 @@ const gameTracker = () => {
     //Column 3 win check
     else if(gameBoard[0][2]===gameBoard[1][2] && gameBoard[1][2]===gameBoard[2][2] && gameBoard[0][2].includes(' ') === false ) {
         if(player1===false) {
-            winner = 'Player1'
+            winner = 'Player X'
             player1Win += 1
             scoreX.innerHTML = player1Win
         } else {
-            winner = 'Player2'
+            winner = 'Player O'
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
@@ -120,11 +121,11 @@ const gameTracker = () => {
     //Diagonal win check '\'
     else if(gameBoard[0][0]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][2] && gameBoard[0][0].includes(' ') === false ) {
         if(player1===false) {
-            winner = 'Player1'
+            winner = 'Player X'
             player1Win += 1
             scoreX.innerHTML = player1Win
         } else {
-            winner = 'Player2'
+            winner = 'Player O'
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
@@ -132,18 +133,18 @@ const gameTracker = () => {
     //Diagonal win check '/'
     else if(gameBoard[0][2]===gameBoard[1][1] && gameBoard[1][1]===gameBoard[2][0] && gameBoard[0][2].includes(' ') === false ) {
         if(player1===false) {
-            winner = 'Player1'
+            winner = 'Player X'
             player1Win += 1
             scoreX.innerHTML = player1Win
         } else {
-            winner = 'Player2'
+            winner = 'Player O'
             player2Win += 1
             scoreO.innerHTML = player2Win
         }
     }
     //check for tie
     else if (gameBoard[0].includes(' ')===false && gameBoard[1].includes(' ')===false && gameBoard[2].includes(' ')===false && winner==='') {
-
+        winner = 'Tie'
     }
     //Condition to check player to first reach 2 wins, change next button to play again starts whole new game
     if(player1Win===2 || player2Win===2) {
