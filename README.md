@@ -17,3 +17,4 @@ To win the game match, one player need to be the first to win 2 rounds. The two 
 
     4. If no more spots are left on the gameboard and neither players match 3 of their symbols then the round will result in a tie. A new round will start.
 
+![Title Screen](https://raw.githubusercontent.com/isaacdong88/Tic-Tac-Toe/master/ticTacToeScreenshot.png)
