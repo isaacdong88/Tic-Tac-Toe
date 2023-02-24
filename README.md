@@ -13,7 +13,7 @@ To win the game match, one player need to be the first to win 2 rounds. The two 
 
     2. During each round the two players will take turns placing their moves on the gameboard.
 
-    3. The first player to match 3 of his symbols either horizontally, vertically or diagonally will win the round. Player first to win 2 rounds will end the game match and declared the winner.
+    3. The first player to match 3 of his/her symbols either horizontally, vertically or diagonally will win the round. Player first to win 2 rounds will end the game match and declared the winner.
 
     4. If no more spots are left on the gameboard and neither players match 3 of their symbols then the round will result in a tie. A new round will start.
 
