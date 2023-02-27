@@ -40,6 +40,15 @@ body {
     text-align: center;
 }    
 
+.row1 div:hover {
+    /* border: ridge; */
+    height: 100px;
+    width: 100px;
+    font-size: 100px;
+    text-align: center;
+    box-shadow: 0px 10px 10px;
+}  
+
 .row2 {
     display: flex;
     height: 100px;
