@@ -16,6 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     align-content: center;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .title {
@@ -113,6 +114,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border-radius: 0px 0px 20px 20px;
 }
 
 .playerScores {
@@ -159,6 +161,7 @@ button {
     border: groove;
     border-radius: 10px;
     font-weight: bold;
+    margin-bottom: 3px;
 }
 
 button:hover {
