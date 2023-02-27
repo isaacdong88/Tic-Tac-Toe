@@ -4,6 +4,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-image: url('background.png');
+    font-family: fantasy;
 }
 
 .gameBoard {
